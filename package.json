@@ -1,0 +1,26 @@
+{
+  "name": "@keystatic/templates-astro",
+  "version": "0.0.51",
+  "license": "MIT",
+  "dependencies": {
+    "@astrojs/markdoc": "^0.8.0",
+    "@astrojs/preact": "^3.5.3",
+    "@astrojs/tailwind": "^5.1.2",
+    "@keystatic/astro": "^5.0.3",
+    "@keystatic/core": "^0.5.39",
+    "astro": "^4.0.3",
+    "preact": "^10.24.3",
+    "tailwindcss": "^3.4.14"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "overrides": {
+    "react": "npm:@preact/compat@latest",
+    "react-dom": "npm:@preact/compat@latest"
+  }
+}
