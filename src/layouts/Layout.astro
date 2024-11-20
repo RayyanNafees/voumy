@@ -1,11 +1,11 @@
 ---
-import '../styles.css'
+import "../styles.css";
 
 export interface Props {
-	title: string;
+	title?: string;
 }
 
-const { title } = Astro.props;
+const { title = "Voumy Blog" } = Astro.props;
 ---
 
 <!DOCTYPE html>

@@ -1,127 +1,133 @@
-<div class="relative -z-50 min-h-screen min-w-full bg-[url(https://picsum.photos/800/800)]">
-  <div class="relative bottom-0 bg-white">
-    <header class="relative w-full bg-[url(https://picsum.photos/500/400)] px-6 py-4 pb-12">
-      <div class="absolute bottom-0 left-0 right-0 top-0 z-10 bg-indigo-950 bg-opacity-60"></div>
-      <nav class="relative z-20 flex items-center justify-between">
-        <div class="flex items-center gap-4">
-          <img src="https://voumyblogs.netlify.app/wp-content/uploads/2024/10/cropped-B-94x94.jpg" alt="voumy" class="size-12" />
-          <h3 class="text-xl font-semibold text-white">Voumy</h3>
-        </div>
-        <div class="rounded border-2 border-white p-2 sm:hidden">
-          <img src="https://api.iconify.design/mdi:menu.svg?color=white" class="size-6" />
-        </div>
-      </nav>
-      <hgroup class="relative z-20 block space-y-4 py-6 text-center text-white">
-        <h1 class="text-4xl">Empowering Ideas, Inspiring Discussion</h1>
-        <p class="font-serif font-extralight">Explore a world of insightful articles and thoughtful commentary that ignites inspiration and fosters meaningful connections through discussion.</p>
-        <h3 class="pt-4"><a href="/blogs" class="rounded-l-full rounded-r-full bg-white px-7 py-3 text-sm font-semibold uppercase text-fuchsia-800">Explore</a></h3>
-      </hgroup>
-    </header>
-    <main class="grid gap-8 px-4 pt-12">
-      <div>
-        <h4 class="font-semi font-serif uppercase text-fuchsia-900">Our Story</h4>
-        <h2 class="mb-8 mt-2 text-3xl">Discover the Journey Behind Voumy's Vision</h2>
-        <article class="my-4 space-y-7 rounded-lg pb-4 shadow-md">
-          <img src="https://picsum.photos/500/300" class="rounded-lg rounded-b-none shadow-2xl" />
-          <div class="grid gap-4 px-2">
-            <h3 class="text-2xl font-semibold">Passionate about shading Perspectives</h3>
-            <p class="font-serif">At Voumy, we connect writers and readers, promoting insightful discussions and creating a community that encourages learning with impactful articles and reliable information</p>
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+  <div class="relative -z-50 min-h-screen min-w-full bg-[url(https://picsum.photos/800/800)]">
+    <div class="relative bottom-0 bg-white">
+      <header class="relative w-full bg-[url(https://picsum.photos/500/400)] px-6 py-4 pb-12">
+        <div class="absolute bottom-0 left-0 right-0 top-0 z-10 bg-indigo-950 bg-opacity-60"></div>
+        <nav class="relative z-20 flex items-center justify-between">
+          <div class="flex items-center gap-4">
+            <img src="https://voumyblogs.netlify.app/wp-content/uploads/2024/10/cropped-B-94x94.jpg" alt="voumy" class="size-12" />
+            <h3 class="text-xl font-semibold text-white">Voumy</h3>
           </div>
-          <button class="m-2 rounded-l-full rounded-r-full bg-fuchsia-800 px-6 py-3 text-sm font-semibold uppercase text-white">Learn More</button>
+          <div class="rounded border-2 border-white p-2 sm:hidden">
+            <img src="https://api.iconify.design/mdi:menu.svg?color=white" class="size-6" />
+          </div>
+        </nav>
+        <hgroup class="relative z-20 block space-y-4 py-6 text-center text-white">
+          <h1 class="text-4xl">Empowering Ideas, Inspiring Discussion</h1>
+          <p class="font-serif font-extralight">Explore a world of insightful articles and thoughtful commentary that ignites inspiration and fosters meaningful connections through discussion.</p>
+          <h3 class="pt-4"><a href="/blogs" class="rounded-l-full rounded-r-full bg-white px-7 py-3 text-sm font-semibold uppercase text-fuchsia-800">Explore</a></h3>
+        </hgroup>
+      </header>
+      <main class="grid gap-8 px-4 pt-12">
+        <div>
+          <h4 class="font-semi font-serif uppercase text-fuchsia-900">Our Story</h4>
+          <h2 class="mb-8 mt-2 text-3xl">Discover the Journey Behind Voumy's Vision</h2>
+          <article class="my-4 space-y-7 rounded-lg pb-4 shadow-md">
+            <img src="https://picsum.photos/500/300" class="rounded-lg rounded-b-none shadow-2xl" />
+            <div class="grid gap-4 px-2">
+              <h3 class="text-2xl font-semibold">Passionate about shading Perspectives</h3>
+              <p class="font-serif">At Voumy, we connect writers and readers, promoting insightful discussions and creating a community that encourages learning with impactful articles and reliable information</p>
+            </div>
+            <button class="m-2 rounded-l-full rounded-r-full bg-fuchsia-800 px-6 py-3 text-sm font-semibold uppercase text-white">Learn More</button>
+          </article>
+        </div>
+        <div class="">
+          <h4 class="font-semi font-serif uppercase text-fuchsia-900">Performance Highlights</h4>
+          <h2 class="mb-4 mt-2 text-3xl font-semibold">Our Impact at a Glance</h2>
+          <article>
+            <div class="space-y-3 border-b-[1px] border-fuchsia-800 py-8">
+              <h5 class="font-serif">Client Satisfactory Rate</h5>
+              <h3 class="text-4xl">98%</h3>
+            </div>
+            <div class="space-y-3 border-b-[1px] border-fuchsia-800 py-8">
+              <h5 class="font-serif">Years of Experience</h5>
+              <h3 class="text-4xl">8</h3>
+            </div>
+            <div class="mb-10 space-y-3 py-8">
+              <h5 class="font-serif">Happy Employees</h5>
+              <h3 class="text-4xl">80</h3>
+            </div>
+          </article>
+        </div>
+      </main>
+    </div>
+    <div class="min-h-96 w-full bg-transparent"></div>
+
+    <main class="bg-purple-50 px-8 pt-16">
+      <h4 class="font-semi font-semiold font-serif uppercase text-fuchsia-900">Our Offerings</h4>
+      <h2 class="mb-4 mt-2 text-3xl">Diverse Topics and Insights</h2>
+      <h3 class="pt-4"><a href="/blogs" class="rounded-l-full rounded-r-full bg-fuchsia-800 px-7 py-3 text-sm font-semibold uppercase text-white">Join Us</a></h3>
+
+      <div class="space-y-12 py-20 pb-16">
+        <article class="my-4 space-y-4 rounded-lg bg-white p-6 shadow-sm">
+          <hgroup class="grid gap-2 border-b-[1px] border-fuchsia-200 pb-4">
+            <h3 class="text-2xl text-fuchsia-800">01</h3>
+            <h4 class="font-semibold">Inspiring Articles</h4>
+          </hgroup>
+          <p class="pb-4 font-serif">Dive into a world of inspiration with our carefully curated articles.</p>
+          <img src="https://picsum.photos/500/310" class="rounded-lg shadow-2xl" />
         </article>
-      </div>
-      <div class="">
-        <h4 class="font-semi font-serif uppercase text-fuchsia-900">Performance Highlights</h4>
-        <h2 class="mb-4 mt-2 text-3xl font-semibold">Our Impact at a Glance</h2>
-        <article>
-          <div class="space-y-3 border-b-[1px] border-fuchsia-800 py-8">
-            <h5 class="font-serif">Client Satisfactory Rate</h5>
-            <h3 class="text-4xl">98%</h3>
-          </div>
-          <div class="space-y-3 border-b-[1px] border-fuchsia-800 py-8">
-            <h5 class="font-serif">Years of Experience</h5>
-            <h3 class="text-4xl">8</h3>
-          </div>
-          <div class="mb-10 space-y-3 py-8">
-            <h5 class="font-serif">Happy Employees</h5>
-            <h3 class="text-4xl">80</h3>
-          </div>
+        <article class="my-4 space-y-4 rounded-lg bg-white p-6 shadow-sm">
+          <hgroup class="grid gap-2 border-b-[1px] border-fuchsia-200 pb-4">
+            <h3 class="text-2xl text-fuchsia-800">02</h3>
+            <h4 class="font-semibold">Thoughtful Commentary</h4>
+          </hgroup>
+          <p class="pb-4 font-serif">Engage with insightful commentary from experienced writers.</p>
+          <img src="https://picsum.photos/500/310" class="rounded-lg shadow-2xl" />
+        </article>
+        <article class="my-4 space-y-4 rounded-lg bg-white p-6 shadow-sm">
+          <hgroup class="grid gap-2 border-b-[1px] border-fuchsia-200 pb-4">
+            <h3 class="text-2xl text-fuchsia-800">03</h3>
+            <h4 class="font-semibold">Writing Community</h4>
+          </hgroup>
+          <p class="pb-4 font-serif">Join our vibrant community of writers to share and grow.</p>
+          <img src="https://picsum.photos/500/310" class="rounded-lg shadow-2xl" />
         </article>
       </div>
     </main>
-  </div>
-  <div class="min-h-96 w-full bg-transparent"></div>
 
-  <main class="bg-purple-50 px-8 pt-16">
-    <h4 class="font-semi font-semiold font-serif uppercase text-fuchsia-900">Our Offerings</h4>
-    <h2 class="mb-4 mt-2 text-3xl">Diverse Topics and Insights</h2>
-    <h3 class="pt-4"><a href="/blogs" class="rounded-l-full rounded-r-full bg-fuchsia-800 px-7 py-3 text-sm font-semibold uppercase text-white">Join Us</a></h3>
-
-    <div class="space-y-12 py-20 pb-16">
-      <article class="my-4 space-y-4 rounded-lg bg-white p-6 shadow-sm">
-        <hgroup class="grid gap-2 border-b-[1px] border-fuchsia-200 pb-4">
-          <h3 class="text-2xl text-fuchsia-800">01</h3>
-          <h4 class="font-semibold">Inspiring Articles</h4>
-        </hgroup>
-        <p class="pb-4 font-serif">Dive into a world of inspiration with our carefully curated articles.</p>
-        <img src="https://picsum.photos/500/310" class="rounded-lg shadow-2xl" />
-      </article>
-      <article class="my-4 space-y-4 rounded-lg bg-white p-6 shadow-sm">
-        <hgroup class="grid gap-2 border-b-[1px] border-fuchsia-200 pb-4">
-          <h3 class="text-2xl text-fuchsia-800">02</h3>
-          <h4 class="font-semibold">Thoughtful Commentary</h4>
-        </hgroup>
-        <p class="pb-4 font-serif">Engage with insightful commentary from experienced writers.</p>
-        <img src="https://picsum.photos/500/310" class="rounded-lg shadow-2xl" />
-      </article>
-      <article class="my-4 space-y-4 rounded-lg bg-white p-6 shadow-sm">
-        <hgroup class="grid gap-2 border-b-[1px] border-fuchsia-200 pb-4">
-          <h3 class="text-2xl text-fuchsia-800">03</h3>
-          <h4 class="font-semibold">Writing Community</h4>
-        </hgroup>
-        <p class="pb-4 font-serif">Join our vibrant community of writers to share and grow.</p>
-        <img src="https://picsum.photos/500/310" class="rounded-lg shadow-2xl" />
+    <div class="relative bg-gray-950 text-white">
+      <div class="absolute bottom-0 left-0 right-0 top-0 bg-fuchsia-950 bg-opacity-30"></div>
+      <article class="relative px-6 py-16 text-center">
+        <section>
+          <h1 class="pb-4 text-3xl">Why Choose Voumy</h1>
+          <h2 class="font-serif text-base">We deliver quality content crafted by h2assionate writers, ensuring every article resonates with our readers and provides valuable insights for learning and growth.</h2>
+        </section>
+        <section class="space-y-8 py-12">
+          <div class="flex flex-col items-center gap-2">
+            <div class="rounded-full bg-white p-1">
+              <img src="https://api.iconify.design/mdi:check.svg" alt="" />
+            </div>
+            <h5 class="text-xl font-semibold">Quality Content</h5>
+            <p>Articles Crafted by Passionate Writers</p>
+          </div>
+          <div class="flex flex-col items-center gap-2">
+            <div class="rounded-full bg-white p-1">
+              <img src="https://api.iconify.design/mdi:check.svg?" alt="" class="font-bold" />
+            </div>
+            <h5 class="text-xl font-semibold">Community Focussed</h5>
+            <p>A platform that encourages open discussions.</p>
+          </div>
+        </section>
+        <div class="relative h-72 w-full bg-white bg-[url(https://voumyblogs.netlify.app/wp-content/uploads/2024/10/cropped-B.jpg)] bg-repeat-space bg-contain bg-center rounded-lg"></div>
       </article>
     </div>
-  </main>
+    <iframe src="https://carouzel.surge.sh" frameborder="1" class="block h-96 w-full bg-white"> </iframe>
+    <footer class="bg-white">
+      <div class="relative w-full bg-[url(https://picsum.photos/500/400)] px-6 py-4 pb-12">
+        <div class="absolute bottom-0 left-0 right-0 top-0 z-10 bg-indigo-950 bg-opacity-60"></div>
 
-  <div class="relative bg-gray-950 text-white">
-    <div class="absolute bottom-0 left-0 right-0 top-0 bg-fuchsia-950 bg-opacity-30"></div>
-    <article class="relative px-6 py-16 text-center">
-      <section>
-        <h1 class="pb-4 text-3xl">Why Choose Voumy</h1>
-        <h2 class="font-serif text-base">We deliver quality content crafted by h2assionate writers, ensuring every article resonates with our readers and provides valuable insights for learning and growth.</h2>
-      </section>
-      <section class="space-y-8 py-12">
-        <div class="flex flex-col items-center gap-2">
-          <div class="rounded-full bg-white p-1">
-            <img src="https://api.iconify.design/mdi:check.svg" alt="" />
-          </div>
-          <h5 class="text-xl font-semibold">Quality Content</h5>
-          <p>Articles Crafted by Passionate Writers</p>
-        </div>
-        <div class="flex flex-col items-center gap-2">
-          <div class="rounded-full bg-white p-1">
-            <img src="https://api.iconify.design/mdi:check.svg?" alt="" class="font-bold" />
-          </div>
-          <h5 class="text-xl font-semibold">Community Focussed</h5>
-          <p>A platform that encourages open discussions.</p>
-        </div>
-      </section>
-      <div class="relative h-72 w-full bg-white bg-[url(https://voumyblogs.netlify.app/wp-content/uploads/2024/10/cropped-B.jpg)] bg-repeat-space bg-contain bg-center rounded-lg"></div>
-    </article>
+        <hgroup class="relative z-20 block space-y-4 py-6 text-center text-white">
+          <h1 class="text-4xl">Ready to Join our Community?</h1>
+          <p class="font-serif font-extralight">ive into a world of ideas and experiences with us. Sign up today and start exploring your next favorite read!.</p>
+          <h3 class="pt-4"><a href="/blogs" class="rounded-l-full rounded-r-full bg-white px-7 py-3 text-sm font-semibold uppercase text-fuchsia-800">Join Us</a></h3>
+        </hgroup>
+      </div>
+      <p class="w-full py-6 text-center font-serif">Copyright &copy; 2024 Voumy</p>
+    </footer>
   </div>
-  <iframe src="https://carouzel.surge.sh" frameborder="1" class="block h-96 w-full bg-white"> </iframe>
-  <footer class="bg-white">
-    <div class="relative w-full bg-[url(https://picsum.photos/500/400)] px-6 py-4 pb-12">
-      <div class="absolute bottom-0 left-0 right-0 top-0 z-10 bg-indigo-950 bg-opacity-60"></div>
-
-      <hgroup class="relative z-20 block space-y-4 py-6 text-center text-white">
-        <h1 class="text-4xl">Ready to Join our Community?</h1>
-        <p class="font-serif font-extralight">ive into a world of ideas and experiences with us. Sign up today and start exploring your next favorite read!.</p>
-        <h3 class="pt-4"><a href="/blogs" class="rounded-l-full rounded-r-full bg-white px-7 py-3 text-sm font-semibold uppercase text-fuchsia-800">Join Us</a></h3>
-      </hgroup>
-    </div>
-    <p class="w-full py-6 text-center font-serif">Copyright &copy; 2024 Voumy</p>
-  </footer>
-</div>
+</Layout>

@@ -5,8 +5,11 @@ import keystatic from '@keystatic/astro';
 import preact from '@astrojs/preact';
 import tailwind from '@astrojs/tailwind';
 
+import vercel from '@astrojs/vercel/serverless';
+
 // https://astro.build/config
 export default defineConfig({
   integrations: [markdoc(), keystatic(), preact({compat: true, devtools:true}), tailwind()],
   output: 'hybrid',
+  adapter: vercel(),
 });
