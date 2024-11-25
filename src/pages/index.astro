@@ -1,5 +1,9 @@
 ---
+import { getCollection } from "astro:content";
 import Layout from "../layouts/Layout.astro";
+
+const posts = await getCollection("posts");
+export const prerender = false
 ---
 
 <Layout>
@@ -24,16 +28,16 @@ import Layout from "../layouts/Layout.astro";
       </header>
       <main class="grid gap-8 px-4 pt-12">
         <div>
-          <h4 class="font-semi font-serif uppercase text-fuchsia-900">Our Story</h4>
-          <h2 class="mb-8 mt-2 text-3xl">Discover the Journey Behind Voumy's Vision</h2>
-          <article class="my-4 space-y-7 rounded-lg pb-4 shadow-md">
+          <h4 class="font-semi font-serif uppercase text-fuchsia-900">Our Story</h4><h2 class="mb-8 mt-2 text-3xl">Discover the Journey Behind Voumy's Vision</h2>
+          {posts.map(post => 
+          <a href={`/posts/${post.slug}`} class="block no-underline my-4 space-y-7 rounded-lg pb-4 shadow-md">
             <img src="https://picsum.photos/500/300" class="rounded-lg rounded-b-none shadow-2xl" />
             <div class="grid gap-4 px-2">
-              <h3 class="text-2xl font-semibold">Passionate about shading Perspectives</h3>
+              <h3 class="text-2xl font-semibold">{post.data.title}</h3>
               <p class="font-serif">At Voumy, we connect writers and readers, promoting insightful discussions and creating a community that encourages learning with impactful articles and reliable information</p>
             </div>
             <button class="m-2 rounded-l-full rounded-r-full bg-fuchsia-800 px-6 py-3 text-sm font-semibold uppercase text-white">Learn More</button>
-          </article>
+          </a>)}
         </div>
         <div class="">
           <h4 class="font-semi font-serif uppercase text-fuchsia-900">Performance Highlights</h4>
