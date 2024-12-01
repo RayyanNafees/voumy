@@ -26,5 +26,23 @@ export default config({
         }),
       },
     }),
+    journal: collection({
+      label: 'Journals',
+      slugField: 'title',
+      path: 'src/content/journals/*',
+      format: { contentField: 'content' },
+      schema: {
+        title: fields.slug({ name: { label: 'Title' } }),
+        content: fields.markdoc({
+          label: 'Content',
+          options: {
+            image: {
+              directory: 'src/assets/images/journals',
+              publicPath: '../../assets/images/journals/',
+            },
+          },
+        }),
+      },
+    }),
   },
 });
