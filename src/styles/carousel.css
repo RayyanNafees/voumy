@@ -1,0 +1,27 @@
+.carousel {
+  position: relative;
+  width: 100%;
+}
+
+.carousel-inner {
+  position: relative;
+  width: 100%;
+  height: 300px;
+}
+
+.carousel-item {
+  position: absolute;
+  width: 100%;
+  transition: transform 0.5s ease;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: auto;
+}
+
+.carousel-prev,
+.carousel-next {
+  cursor: pointer;
+  font-size: 2rem;
+}

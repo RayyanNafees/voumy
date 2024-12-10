@@ -1,0 +1,152 @@
+---
+import "@/styles/carousel.css";
+
+export interface Props {
+  class: string;
+}
+
+const { class: className } = Astro.props;
+---
+
+<div class={className}>
+  <div class="overflow-hidden relative carousel">
+    <div class="overflow-hidden relative w-full carousel-inner">
+      <div class="absolute w-full carousel-item active">
+        <div class="block w-full">
+          <div class="flex flex-col justify-center p-20">
+            <div class="mx-auto w-20">
+              <img
+                src="https://picsum.photos/200/200.webp"
+                class="w-5 rounded-full"
+                alt="Slide 1"
+              />
+            </div>
+            <h1 class="py-4 text-lg font-semibold text-center text-nowrap">
+              Hello
+            </h1>
+            <p class="block flex-nowrap text-center">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum,
+              blanditiis. voluptatum exercitationem ducimus.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="absolute w-full carousel-item">
+        <img
+          src="https://picsum.photos/500/500.webp"
+          class="block w-full"
+          alt="Slide 2"
+        />
+      </div>
+
+      <!-- Add more slides as needed -->
+    </div>
+    <!-- Carousel Controls -->
+    <button
+      class="absolute left-0 top-1/2 p-3 text-white rounded-full transform -translate-y-1/2 carousel-prev"
+    >
+      <svg
+        xmlns="<http://www.w3.org/2000/svg>"
+        class="w-6 h-6 text-fuchsia-800"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="4"
+          d="M15 19l-7-7 7-7"></path>
+      </svg>
+    </button>
+    <button
+      class="absolute right-0 top-1/2 p-3 text-white rounded-full transform -translate-y-1/2 carousel-next"
+    >
+      <svg
+        xmlns="<http://www.w3.org/2000/svg>"
+        class="w-6 h-6 text-fuchsia-800"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="4"
+          d="M9 5l7 7-7 7"></path>
+      </svg>
+    </button>
+  </div>
+  <div class="flex justify-center mt-4 carousel-indicators">
+    <button
+      class="mx-1 bg-fuchsia-800 rounded-full size-2 indicator"
+      data-slide-to="0"></button>
+    <button
+      class="mx-1 bg-fuchsia-200 rounded-full size-2 indicator"
+      data-slide-to="1"></button>
+    <!-- Add more indicators as needed -->
+  </div>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const carousel = document.querySelector(".carousel") as HTMLDivElement;
+      const carouselInner = document.querySelector(
+        ".carousel-inner"
+      ) as HTMLDivElement;
+      const carouselItems =
+        document.querySelectorAll<HTMLDivElement>(".carousel-item");
+      const prevButton = document.querySelector(
+        ".carousel-prev"
+      ) as HTMLDivElement;
+      const nextButton = document.querySelector(
+        ".carousel-next"
+      ) as HTMLDivElement;
+      const indictors = document.querySelector(
+        ".carousel-indicators > .indicator"
+      ) as HTMLDivElement;
+      let currentIndex = 0;
+
+      function updateCarousel() {
+        carouselItems.forEach((item, index) => {
+          item.style.transform = `translateX(${(index - currentIndex) * 100}%)`;
+        });
+
+        const indicators = document.querySelectorAll(".indicator");
+        indicators.forEach((indicator, index) => {
+          indicator.classList.toggle("bg-fuchsia-800", index === currentIndex);
+          indicator.classList.toggle("bg-fuchsia-200", index !== currentIndex);
+        });
+      }
+
+      prevButton.addEventListener("click", () => {
+        currentIndex =
+          currentIndex > 0 ? currentIndex - 1 : carouselItems.length - 1;
+        updateCarousel();
+      });
+
+      nextButton.addEventListener("click", () => {
+        currentIndex =
+          currentIndex < carouselItems.length - 1 ? currentIndex + 1 : 0;
+        updateCarousel();
+      });
+
+      let interval: number;
+      interval = setInterval(() => {
+        currentIndex =
+          currentIndex > 0 ? currentIndex - 1 : carouselItems.length - 1;
+        updateCarousel();
+      }, 3000);
+
+      carousel.addEventListener("mouseover", () => {
+        clearInterval(interval);
+      });
+
+      carousel.addEventListener("mouseout", () => {
+        interval = setInterval(() => {
+          currentIndex =
+            currentIndex > 0 ? currentIndex - 1 : carouselItems.length - 1;
+          updateCarousel();
+        }, 3000);
+      });
+    });
+  </script>
+</div>
