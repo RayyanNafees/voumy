@@ -4,5 +4,8 @@ export default {
 	theme: {
 		extend: {},
 	},
-	plugins: [],
+	plugins: [require('rippleui')],
+	rippleui: {
+		disableThemes: ['light', 'dark'],
+	}
 }

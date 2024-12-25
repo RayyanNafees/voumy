@@ -23,5 +23,8 @@
   "overrides": {
     "react": "npm:@preact/compat@latest",
     "react-dom": "npm:@preact/compat@latest"
+  },
+  "devDependencies": {
+    "rippleui": "^1.12.1"
   }
 }

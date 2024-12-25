@@ -2,20 +2,19 @@
 import { getCollection } from "astro:content";
 import Layout from "../layouts/Layout.astro";
 import Carousel from "@/components/carousel.astro";
-
 const posts = await getCollection("posts");
 export const prerender = false;
 ---
 
 <Layout>
   <div
-    class="relative -z-50 min-h-screen min-w-full bg-[url(https://picsum.photos/800/800)]"
+    class="relative -z-50 min-h-screen min-w-full bg-[url(https://picsum.photos/800/800)] bg-no-repeat bg-center bg-contain bg-fixed"
   >
     <div class="relative bottom-0 bg-white">
       <header
-        class="relative w-full bg-[url(https://picsum.photos/500/400)] px-6 py-4 pb-12"
+        class="relative w-full bg-[url(https://picsum.photos/500/400)] px-6 bg-norepeat bg-cover py-4 pb-12"
       >
-        <div
+        <div 
           class="absolute bottom-0 left-0 right-0 top-0 z-10 bg-indigo-950 bg-opacity-60"
         >
         </div>
@@ -24,7 +23,7 @@ export const prerender = false;
             <img
               src="https://voumyblogs.netlify.app/wp-content/uploads/2024/10/cropped-B-94x94.jpg"
               alt="voumy"
-              class="size-12"
+              class="size-12 sm:size-20"
             />
             <h3 class="text-xl font-semibold text-white">Voumy</h3>
           </div>
@@ -48,15 +47,16 @@ export const prerender = false;
             <a
               href="/blogs"
               class="rounded-l-full rounded-r-full bg-white px-7 py-3 text-sm font-semibold uppercase text-fuchsia-800"
-              >Explore</a>
+              >Explore</a
+            >
           </h3>
         </hgroup>
       </header>
-      <main class="grid gap-8 px-4 pt-12">
+      <main class="grid gap-8 px-4 sm:px-16 pt-12">
         <div>
           <h4 class="font-semi font-serif uppercase text-fuchsia-900">
             Our Story
-          </h4><h2 class="mb-8 mt-2 text-3xl">
+          </h4><h2 class="mb-8 mt-2 text-3xl font-semibold">
             Discover the Journey Behind Voumy's Vision
           </h2>
           {
@@ -120,7 +120,8 @@ export const prerender = false;
         <a
           href="/blogs"
           class="rounded-l-full rounded-r-full bg-fuchsia-800 px-7 py-3 text-sm font-semibold uppercase text-white"
-          >Join Us</a>
+          >Join Us</a
+        >
       </h3>
 
       <div class="space-y-12 py-20 pb-16">
@@ -202,7 +203,7 @@ export const prerender = false;
           </div>
         </section>
         <div
-          class="relative h-72 w-full bg-white bg-[url(https://voumyblogs.netlify.app/wp-content/uploads/2024/10/cropped-B.jpg)] bg-repeat-space bg-contain bg-center rounded-lg"
+          class="relative h-72 w-full bg-white bg-[url(https://voumyblogs.netlify.app/wp-content/uploads/2024/10/cropped-B.jpg)] bg-no-repeat bg-cover bg-center rounded-lg"
         >
         </div>
       </article>
@@ -210,7 +211,7 @@ export const prerender = false;
     <Carousel class="block h-96 w-full bg-white" />
     <footer class="bg-white">
       <div
-        class="relative w-full bg-[url(https://picsum.photos/500/400)] px-6 py-4 pb-12"
+        class="relative w-full bg-[url(https://picsum.photos/500/400)] bg-cover bg-no-repeat bg-center px-6 py-4 pb-12"
       >
         <div
           class="absolute bottom-0 left-0 right-0 top-0 z-10 bg-indigo-950 bg-opacity-60"
@@ -229,7 +230,8 @@ export const prerender = false;
             <a
               href="/blogs"
               class="rounded-l-full rounded-r-full bg-white px-7 py-3 text-sm font-semibold uppercase text-fuchsia-800"
-              >Join Us</a>
+              >Join Us</a
+            >
           </h3>
         </hgroup>
       </div>

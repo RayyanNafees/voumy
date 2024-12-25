@@ -24,6 +24,11 @@ export default config({
             },
           },
         }),
+        image: fields.image({
+          label: 'Upload Image',
+          directory: 'src/assets/images/posts',
+          publicPath: '../../assets/images/posts/',
+        })
       },
     }),
     journal: collection({
